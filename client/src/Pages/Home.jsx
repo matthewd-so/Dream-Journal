@@ -13,7 +13,7 @@ const Home = () => {
         setloading(true)
         try {
             const { data } = await axios.get(
-                "http://localhost:8000/api/v1/getdata"
+                "https://image-generator-drhq.onrender.com/api/v1/getdata"
             )
             if (data?.sucess) {
                 return setserver(data)

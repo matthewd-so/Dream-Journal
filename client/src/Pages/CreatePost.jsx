@@ -26,7 +26,7 @@ const CreatePost = () => {
             setloading(true)
             setSingleImage(null)
             const { data } = await axios.post(
-                "http://localhost:8000/api/v1/image",
+                "https://image-generator-drhq.onrender.com/api/v1/image",
                 { prompt }
             )
             if (data?.sucess) {
@@ -61,7 +61,7 @@ const CreatePost = () => {
             try {
                 setButtonloading(true)
                 const { data } = await axios.post(
-                    "http://localhost:8000/api/v1/post",
+                    "https://image-generator-drhq.onrender.com/api/v1/post",
                     { name, prompt, photoUrl }
                 )
                 if (data?.sucess) {
